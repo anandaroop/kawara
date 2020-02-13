@@ -1,21 +1,18 @@
 import React from 'react'
 import Head from 'next/head'
 
+import { KawaraDate } from '../components/Date'
+
 const Home = () => (
   <>
     <Head>
       <title>Date painting</title>
     </Head>
     <main>
-      <section className="date">{new Date().toLocaleDateString()}</section>
+      <KawaraDate date={new Date()}></KawaraDate>
     </main>
     <style jsx>
       {`
-        @font-face {
-          font-family: "kawara";
-          src: url("OnKawara-Regular.otf")
-        }
-
         main {
           position: absolute;
           top: 0;
@@ -27,11 +24,6 @@ const Home = () => (
           flex-direction: column;
           justify-content: center;
           align-items: center;
-        }
-
-        section.date {
-          font-family: kawara;
-          font-size: 10vw;
         }
       `}
     </style>
