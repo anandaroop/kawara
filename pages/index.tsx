@@ -11,6 +11,11 @@ const Home = () => (
     </main>
     <style jsx>
       {`
+        @font-face {
+          font-family: "kawara";
+          src: url("OnKawara-Regular.otf")
+        }
+
         main {
           position: absolute;
           top: 0;
@@ -25,6 +30,7 @@ const Home = () => (
         }
 
         section.date {
+          font-family: kawara;
           font-size: 10vw;
         }
       `}
